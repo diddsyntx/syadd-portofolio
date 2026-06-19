@@ -26,7 +26,6 @@
       canvas {
         display: block;
       }
-
       #mobile-controls {
         display: none;
         position: fixed;
@@ -37,19 +36,7 @@
         z-index: 100;
         pointer-events: none;
       }
-
       .ctrl-left {
-        position: absolute;
-        right: 16px;
-        bottom: 16px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        pointer-events: all;
-      }
-
-      .ctrl-right {
         position: absolute;
         left: 16px;
         bottom: 16px;
@@ -59,12 +46,20 @@
         gap: 6px;
         pointer-events: all;
       }
-
+      .ctrl-right {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        pointer-events: all;
+      }
       .ctrl-row {
         display: flex;
         gap: 6px;
       }
-
       .btn-ctrl {
         width: 56px;
         height: 56px;
@@ -82,12 +77,10 @@
         cursor: pointer;
         transition: background 0.1s;
       }
-
       .btn-ctrl:active,
       .btn-ctrl.pressed {
         background: rgba(255, 255, 255, 0.25);
       }
-
       .btn-ctrl.attack {
         width: 64px;
         height: 64px;
@@ -96,7 +89,6 @@
         font-size: 1rem;
         font-family: "Pixelify Sans", monospace;
       }
-
       .player-label {
         font-family: "Pixelify Sans", monospace;
         font-size: 0.7rem;
@@ -105,7 +97,6 @@
         text-transform: uppercase;
         margin-bottom: 4px;
       }
-
       @media (max-width: 900px) {
         #mobile-controls {
           display: block;

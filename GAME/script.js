@@ -483,8 +483,10 @@ document.addEventListener("keyup", (e) => {
   if (isDead1 || isDead2) return;
   if (e.code === "ArrowLeft") warriorMovement.isMovingLeft = false;
   if (e.code === "ArrowRight") warriorMovement.isMovingRight = false;
-  if (!warriorMovement.isJumping) updateImageByMovement();
+  if (e.code === "ArrowLeft" || e.code === "ArrowRight") {
+    if (!warriorMovement.isJumping) updateImageByMovement();
+  }
   if (e.code === "KeyD") warrior2.isMovingRight2 = false;
   if (e.code === "KeyA") warrior2.isMovingLeft2 = false;
-  updateImageByMovementEnemy();
+  if (e.code === "KeyD" || e.code === "KeyA") updateImageByMovementEnemy();
 });
